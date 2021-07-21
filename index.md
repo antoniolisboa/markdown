@@ -140,3 +140,21 @@ https://github.com/antoniolisboa
  - Continentes
     - Europa
     - Oceania
+
+## Listas ordenadas
+Na descrição de uma lista ordenada utilizamos um número seguide '.'.
+
+~~~
+1. Paises
+    1.1. Brasil
+    1.2. Portugal
+2. Continantes
+    2.1. Europa
+    2.3. Oceania
+~~~
+1. Paises
+    1.1. Brasil
+    1.2. Portugal
+2. Continantes
+    2.1. Europa
+    2.3. Oceania
