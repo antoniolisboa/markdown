@@ -1,257 +1,619 @@
-<h1 id="tutorial-de-markdown">Tutorial de Markdown</h1>
-<p>Markdown é uma linguagem de marcação que pode ser utilizada para varias coisas, por exemplo em anotações pessoais ou simplesmenta na criação de uma página estática de html utilizando <a href="https://pandoc.org/installing.html" title="Página para download do pandoc">Pandoc</a>. O que realmenter torna o Markdown útil é a sua fácil construção sua e sintaxe simples.</p>
-<table style="width:6%;">
-<colgroup>
-<col style="width: 5%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>## Criando arquivo Para criar seu primeiro markdown é simples basta escrever um arquivo com a extenção <em>.md</em> ou com a extenção <em>.markdown</em> e pronto basta a começar a edição.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>## Visualizando meu arquivo markdown Para os usuários de vscode recomendo que utilizam a exteção <em>Markdown Preview Enhanced</em> ela permite visualizar seu texto em markdown em tempo real enquando você está trabalhando nele como mostra a imagem.</td>
-</tr>
-<tr class="even">
-<td><img src="images/vscode_extencao.png" alt="extencao vscode" /></td>
-</tr>
-</tbody>
-</table>
-<h2 id="paragráfo">Paragráfo</h2>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>index</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Antonio Carlos\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.22\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export" >
+      <div class="mume markdown-preview  "  >
+      <html><head></head><body><div><h1 class="mume-header" id="tutorial-de-markdown">Tutorial de Markdown</h1>
+
+<p>Markdown &#xE9; uma linguagem de marca&#xE7;&#xE3;o que pode ser utilizada para varias coisas, por exemplo em anota&#xE7;&#xF5;es pessoais ou simplesmenta na cria&#xE7;&#xE3;o de uma p&#xE1;gina est&#xE1;tica de html utilizando <a href="https://pandoc.org/installing.html" title="P&#xE1;gina para download do pandoc">Pandoc</a>. O que realmenter torna o Markdown &#xFA;til &#xE9; a sua f&#xE1;cil constru&#xE7;&#xE3;o sua e sintaxe simples.</p>
+<hr>
+<h2 class="mume-header" id="criando-arquivo">Criando arquivo</h2>
+
+<p>Para criar seu primeiro markdown &#xE9; simples basta escrever um arquivo com a exten&#xE7;&#xE3;o <em>.md</em> ou com a exten&#xE7;&#xE3;o <em>.markdown</em> e pronto basta a come&#xE7;ar a edi&#xE7;&#xE3;o.</p>
+<hr>
+<h2 class="mume-header" id="visualizando-meu-arquivo-markdown">Visualizando meu arquivo markdown</h2>
+
+<p>Para os usu&#xE1;rios de vscode recomendo que utilizam a exte&#xE7;&#xE3;o <em>Markdown Preview Enhanced</em> ela permite visualizar seu texto em markdown em tempo real enquando voc&#xEA; est&#xE1; trabalhando nele como mostra a imagem.</p>
+<p><img src="file:///C:\Users\Antonio Carlos\Development\markdown\images\vscode_extencao.png" alt="extencao vscode"></p>
+<hr>
+<h2 class="mume-header" id="paragr%C3%A1fo">Paragr&#xE1;fo</h2>
+
 <p>Para se obter um paragrafo em markdown basta pular uma linha.</p>
-<pre><code>1 Primeiro paragráfo.
-2 continuando o primeiro paragráfo.
+<pre data-role="codeBlock" data-info class="language-"><code>1 Primeiro paragr&#xE1;fo.
+2 continuando o primeiro paragr&#xE1;fo.
 3 
-4 Segundo paragráfo.
-5 continuando o segundo paragráfo.</code></pre>
-<p>Primeiro paragráfo. continuando o primeiro paragráfo.</p>
-<p>Segundo paragráfo. continuando o segundo paragráfo.</p>
-<table style="width:6%;">
-<colgroup>
-<col style="width: 5%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>## Títulos Os títulos são definidos pelo <em>#</em> seguido do <em>Título</em>.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>## Texto em itálico Para se escrever um texto em itálico basta utilizar _<em>_ <em><em>_ ou </em></em></em> *_* colocando o texto na parte interna.</td>
-</tr>
-<tr class="even">
-<td>~~~ 1 <em>texto em itálico 1</em> 2 <em>texto em itálico 2</em> ~~~</td>
-</tr>
-<tr class="odd">
-<td><em>texto em itálico 1</em> <em>texto em itálico 2</em></td>
-</tr>
-</tbody>
-</table>
-<p>## Texto em negrito A escrita de um texto em negrito é semelhante ao em itálico com algumas pequenas mudanças. Para deixar em negrito use _**_ _**_ ou *__* *__* adicionando o texto na parte interna.</p>
-<pre><code>1 **texto em negrito 1**
-2 __texto em negrito 2__</code></pre>
-<p><strong>texto em negrito 1</strong> <strong>texto em negrito 2</strong></p>
-<table style="width:6%;">
-<colgroup>
-<col style="width: 5%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: right;">## Links A dicionar links em markdown é muito simples. 1. Link direto ~~~ 1 https://github.com/antoniolisboa 2 <a href="https://github.com/antoniolisboa" class="uri">https://github.com/antoniolisboa</a> ~~~ https://github.com/antoniolisboa <a href="https://github.com/antoniolisboa" class="uri">https://github.com/antoniolisboa</a></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">## Citações Citação é reliazada utilizando o <em>&gt;</em> ela pode ser de uma linha ou mutltiplas linhas.</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">~~~ &gt;Citação de uma linha ~~~ &gt;Citação de uma linha</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">~~~ &gt;Citação de multiplas linhas &gt;Linha 1 &gt;Linha 2 &gt;Linha 3 ~~~ &gt;Citação de multiplas linhas &gt;Linha 1 &gt;Linha 2 &gt;Linha 3</td>
-</tr>
-</tbody>
-</table>
-<p>## Lista não ordenada Lista de itens não ordenados pode ser feita utilizando _<em>_ ou </em>-<em>. ~~~ </em> Paises * Brasil * Portugal * Continentes * Europa * Oceania ~~~</p>
-<ul>
+4 Segundo paragr&#xE1;fo.
+5 continuando o segundo paragr&#xE1;fo.
+</code></pre><p>Primeiro paragr&#xE1;fo.<br>
+continuando o primeiro paragr&#xE1;fo.</p>
+<p>Segundo paragr&#xE1;fo.<br>
+continuando o segundo paragr&#xE1;fo.</p>
+<hr>
+<h2 class="mume-header" id="t%C3%ADtulos">T&#xED;tulos</h2>
+
+<p>Os t&#xED;tulos s&#xE3;o definidos pelo <em>#</em> seguido do <em>T&#xED;tulo</em>.</p>
+<pre data-role="codeBlock" data-info class="language-"><code> # T&#xED;tulo equivalente ao h1 em html
+ ## T&#xED;tulo equivalente ao h2 em html
+ ### T&#xED;tulo equivalente ao h3 em html
+ #### T&#xED;tulo equivalente ao h4 em html
+ ##### T&#xED;tulo equivalente ao h5 em html
+ ###### T&#xED;tulo equivalente ao h6 em html
+</code></pre><h1 class="mume-header" id="t%C3%ADtulo-equivalente-ao-h1-em-html">T&#xED;tulo equivalente ao h1 em html</h1>
+
+<h2>T&#xED;tulo equivalente ao h2 em html</h2>
+<h3>T&#xED;tulo equivalente ao h3 em html</h3>
+<h4>T&#xED;tulo equivalente ao h4 em html</h4>
+<h5>T&#xED;tulo equivalente ao h5 em html</h5>
+<h6>T&#xED;tulo equivalente ao h6 em html</h6>
+<hr>
+<h2>Texto em it&#xE1;lico</h2>
+<p>Para se escrever um texto em it&#xE1;lico basta utilizar <em>*</em> <em>*</em> ou <em>_</em> <em>_</em> colocando o texto na parte interna.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>1 *texto em it&#xE1;lico 1*
+2 _texto em it&#xE1;lico 2_
+</code></pre><p><em>texto em it&#xE1;lico 1</em><br>
+<em>texto em it&#xE1;lico 2</em></p>
+<hr>
+<h2>Texto em negrito</h2>
+<p>A escrita de um texto em negrito &#xE9; semelhante ao em it&#xE1;lico com algumas pequenas mudan&#xE7;as. Para deixar em negrito use <em>**</em> <em>**</em> ou <em>__</em> <em>__</em> adicionando o texto na parte interna.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>1 **texto em negrito 1**
+2 __texto em negrito 2__
+</code></pre><p><strong>texto em negrito 1</strong><br>
+<strong>texto em negrito 2</strong></p>
+<hr>
+<h2>Links</h2>
+<p>A dicionar links em markdown &#xE9; muito simples.</p>
+<ol>
+<li>Link direto</li>
+</ol>
+<pre data-role="codeBlock" data-info class="language-"><code>1 https://github.com/antoniolisboa
+2 &lt;https://github.com/antoniolisboa&gt;
+</code></pre><p><a href="https://github.com/antoniolisboa">https://github.com/antoniolisboa</a><br>
+<a href="https://github.com/antoniolisboa">https://github.com/antoniolisboa</a></p>
+<ol start="2">
+<li>Link em trecho de texto</li>
+</ol>
+<pre data-role="codeBlock" data-info class="language-"><code>[Antonio Github](https://github.com/antoniolisboa)
+</code></pre><p><a href="https://github.com/antoniolisboa">Antonio Github</a></p>
+<ol start="3">
+<li>Link em trecho de texto com title</li>
+</ol>
+<pre data-role="codeBlock" data-info class="language-"><code>[Antonio Github](https://github.com/antoniolisboa &quot;Minha p&#xE1;gina no github&quot;)
+</code></pre><p><a href="https://github.com/antoniolisboa" title="Minha p&#xE1;gina no github">Antonio Github</a></p>
+<hr>
+<h2>Cita&#xE7;&#xF5;es</h2>
+<p>Cita&#xE7;&#xE3;o &#xE9; reliazada utilizando o <em>&gt;</em> ela pode ser de uma linha ou mutltiplas linhas.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>&gt;Cita&#xE7;&#xE3;o de uma linha
+</code></pre><blockquote>
+<p>Cita&#xE7;&#xE3;o de uma linha</p>
+</blockquote>
+<pre data-role="codeBlock" data-info class="language-"><code>&gt;Cita&#xE7;&#xE3;o de multiplas linhas
+&gt;Linha 1
+&gt;Linha 2
+&gt;Linha 3
+</code></pre><blockquote>
+<p>Cita&#xE7;&#xE3;o de multiplas linhas<br>
+Linha 1<br>
+Linha 2<br>
+Linha 3</p>
+</blockquote>
+<hr>
+<h2>Lista n&#xE3;o ordenada</h2>
+<p>Lista de itens n&#xE3;o ordenados pode ser feita utilizando <em>*</em> ou <em>-</em>.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>* Paises
+   * Brasil
+   * Portugal
+* Continentes
+   * Europa
+   * Oceania
+</code></pre><ul>
 <li>Paises
 <ul>
 <li>Brasil</li>
 <li>Portugal</li>
-</ul></li>
+</ul>
+</li>
 <li>Continentes
 <ul>
 <li>Europa</li>
 <li>Oceania</li>
-</ul></li>
 </ul>
-<pre><code> - Paises
+</li>
+</ul>
+<pre data-role="codeBlock" data-info class="language-"><code> - Paises
     - Brasil
     - Portugal
  - Continentes
     - Europa
-    - Oceania</code></pre>
-<ul>
+    - Oceania
+</code></pre><ul>
 <li>Paises
 <ul>
 <li>Brasil</li>
 <li>Portugal</li>
-</ul></li>
+</ul>
+</li>
 <li>Continentes
 <ul>
 <li>Europa</li>
 <li>Oceania</li>
-</ul></li>
 </ul>
-<table style="width:6%;">
-<colgroup>
-<col style="width: 5%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>## Listas ordenadas Na descrição de uma lista ordenada utilizamos um número seguide ‘.’.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>## Imagens Em markdown existe algumas forma de se trabalhar com imagens tanto em repositório local junto com seu texto (no mesmo diretório) ou com imagens online.</td>
-</tr>
-<tr class="even">
-<td>1. Para imagens locais adicione suas imagem no mesmo diretório do seu arquivo markdown.</td>
-</tr>
-<tr class="odd">
-<td>~~~ <img src="nemaimage.png" alt="image" /> <img src="nemaimage.png" title="title da imagem" alt="image" /></td>
-</tr>
-<tr class="even">
-<td>Exemplo: <img src="Markdown.svg" title="Logo Markdown" alt="Markdown" /> ~~~ <img src="Markdown.png" title="Logo Markdown" alt="Markdown" /></td>
-</tr>
-<tr class="odd">
-<td>2. Para imagens online basta ter o link da imagem. ~~~ <img src="http://linkimage.com" alt="image_online" /> <img src="http://linkimage.com" title="title da imagem online" alt="image_online" /></td>
-</tr>
-<tr class="even">
-<td>Exemplo: <img src="https://icons.veryicon.com/png/o/file-type/doucument/markdown-fill-1.png" title="Logo Markdown online" alt="Markdown_online" /> ~~~ <img src="https://icons.veryicon.com/png/o/file-type/doucument/markdown-fill-1.png" title="Logo Markdown online" alt="Markdown_online" /></td>
-</tr>
-</tbody>
-</table>
-<p>## Tabelas Markdown apresenta um recurso de tabelas bem interessante e de fácil construção.</p>
-<ol type="1">
-<li>Por padrão as colunas são alinhadas a esquerda.</li>
+</li>
+</ul>
+<hr>
+<h2 class="mume-header" id="listas-ordenadas">Listas ordenadas</h2>
+
+<p>Na descri&#xE7;&#xE3;o de uma lista ordenada utilizamos um n&#xFA;mero seguide &apos;.&apos;.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>1. Paises
+    1.1. Brasil
+    1.2. Portugal
+2. Continantes
+    2.1. Europa
+    2.3. Oceania
+</code></pre><ol>
+<li>Paises<br>
+1.1. Brasil<br>
+1.2. Portugal</li>
+<li>Continantes<br>
+2.1. Europa<br>
+2.3. Oceania</li>
 </ol>
-<pre><code>Produto | Preço | Add colunas... 
+<hr>
+<h2 class="mume-header" id="imagens">Imagens</h2>
+
+<p>Em markdown existe algumas forma de se trabalhar com imagens tanto em reposit&#xF3;rio local junto com seu texto (no mesmo diret&#xF3;rio) ou com imagens online.</p>
+<ol>
+<li>Para imagens locais adicione suas imagem no mesmo diret&#xF3;rio do seu arquivo markdown.</li>
+</ol>
+<pre data-role="codeBlock" data-info class="language-"><code>![image](nemaimage.png)
+![image](nemaimage.png &quot;title da imagem&quot;)
+
+Exemplo:
+![Markdown](Markdown.svg &quot;Logo Markdown&quot;)
+</code></pre><p><img src="file:///C:\Users\Antonio Carlos\Development\markdown\Markdown.png" alt="Markdown" title="Logo Markdown"></p>
+<ol start="2">
+<li>Para imagens online basta ter o link da imagem.</li>
+</ol>
+<pre data-role="codeBlock" data-info class="language-"><code>![image_online](http://linkimage.com)
+![image_online](http://linkimage.com &quot;title da imagem online&quot;)
+
+Exemplo: 
+![Markdown_online](https://icons.veryicon.com/png/o/file-type/doucument/markdown-fill-1.png &quot;Logo Markdown online&quot;)
+</code></pre><p><img src="https://icons.veryicon.com/png/o/file-type/doucument/markdown-fill-1.png" alt="Markdown_online" title="Logo Markdown online"></p>
+<hr>
+<h2>Tabelas</h2>
+<p>Markdown apresenta um recurso de tabelas bem interessante e de f&#xE1;cil constru&#xE7;&#xE3;o.</p>
+<ol>
+<li>Por padr&#xE3;o as colunas s&#xE3;o alinhadas a esquerda.</li>
+</ol>
+<pre data-role="codeBlock" data-info class="language-"><code>Produto | Pre&#xE7;o | Add colunas... 
 --------------------------------
 Playstation 5 | 1 rin
 Xbox Series | R$ 3000.00
-Atari | Dinheiro nenhum compra</code></pre>
-<table>
+Atari | Dinheiro nenhum compra
+</code></pre><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Produto</th>
-<th>Preço</th>
-<th>Add colunas…</th>
+<th>Pre&#xE7;o</th>
+<th>Add colunas...</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Playstation 5</td>
 <td>1 rin</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Xbox Series</td>
 <td>R$ 3000.00</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Atari</td>
 <td>Dinheiro nenhum compra</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<ol start="2" type="1">
-<li>Para alinhar uma coluna a direita basta colocar o ‘:’ do lado direito.</li>
+<ol start="2">
+<li>Para alinhar uma coluna a direita basta colocar o &apos;:&apos; do lado direito.</li>
 </ol>
-<pre><code>Produto | Preço | 
+<pre data-role="codeBlock" data-info class="language-"><code>Produto | Pre&#xE7;o | 
 --------:|------:
 Playstation 5 | 1 rin
 Xbox Series | R$ 3000.00
-Atari | Dinheiro nenhum compra</code></pre>
-<table>
+Atari | Dinheiro nenhum compra
+</code></pre><table>
 <thead>
-<tr class="header">
-<th style="text-align: right;">Produto</th>
-<th style="text-align: right;">Preço</th>
+<tr>
+<th style="text-align:right">Produto</th>
+<th style="text-align:right">Pre&#xE7;o</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: right;">Playstation 5</td>
-<td style="text-align: right;">1 rin</td>
+<tr>
+<td style="text-align:right">Playstation 5</td>
+<td style="text-align:right">1 rin</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">Xbox Series</td>
-<td style="text-align: right;">R$ 3000.00</td>
+<tr>
+<td style="text-align:right">Xbox Series</td>
+<td style="text-align:right">R$ 3000.00</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">Atari</td>
-<td style="text-align: right;">Dinheiro nenhum compra</td>
+<tr>
+<td style="text-align:right">Atari</td>
+<td style="text-align:right">Dinheiro nenhum compra</td>
 </tr>
 </tbody>
 </table>
-<ol start="3" type="1">
-<li>Para centralizar uma coluna basta utilizar ‘:’ tanto do lado direito quanto do esquerdo.</li>
+<ol start="3">
+<li>Para centralizar uma coluna basta utilizar &apos;:&apos; tanto do lado direito quanto do esquerdo.</li>
 </ol>
-<pre><code>Produto | Preço | 
+<pre data-role="codeBlock" data-info class="language-"><code>Produto | Pre&#xE7;o | 
 :--------:|:------:
 Playstation 5 | 1 rin
 Xbox Series | R$ 3000.00
-Atari | Dinheiro nenhum compra</code></pre>
-<table>
+Atari | Dinheiro nenhum compra
+</code></pre><table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">Produto</th>
-<th style="text-align: center;">Preço</th>
+<tr>
+<th style="text-align:center">Produto</th>
+<th style="text-align:center">Pre&#xE7;o</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;">Playstation 5</td>
-<td style="text-align: center;">1 rin</td>
+<tr>
+<td style="text-align:center">Playstation 5</td>
+<td style="text-align:center">1 rin</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">Xbox Series</td>
-<td style="text-align: center;">R$ 3000.00</td>
+<tr>
+<td style="text-align:center">Xbox Series</td>
+<td style="text-align:center">R$ 3000.00</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">Atari</td>
-<td style="text-align: center;">Dinheiro nenhum compra</td>
-</tr>
-</tbody>
-</table>
-<table style="width:6%;">
-<colgroup>
-<col style="width: 5%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: right;">## Texto mono-espaçado Inline Está é uma das funcionalidades do markdown que eu mais gosto ela nos permite escrever trechos de códigos de forma elegante. Para relizar tal tarefa basta utilizar <em>```</em> ou <em>~~~</em>.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">## Lista de tarefas O markdown apresenta um recurso para criação de lista de tarefas.</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;"><em>-</em> [ ] Tarefa 1 <em>-</em> [ ] Tarefa 2 <em>-</em> [x] Tarefa 3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">- [ ] Tarefa 1 - [ ] Tarefa 2 - [x] Tarefa 3</td>
+<tr>
+<td style="text-align:center">Atari</td>
+<td style="text-align:center">Dinheiro nenhum compra</td>
 </tr>
 </tbody>
 </table>
-<p>## Separador de conteúdo ~~~ — ~~~ —</p>
-<hr />
-<p>## Considerações finais Espero que tenha gostado deste pequeno tutorial sobre markdown.</p>
-<p>## Autor #### Antonio Carlos de Lisboa Estudante de Engenharia da Computação da UTFPR - Universidade Tecnlógica Federal do Paraná.</p>
-<p>Redes Sociais: <a href="https://www.linkedin.com/in/antonio-carlos-de-lisboa-549b8a181" title="Linkedin Atonio Lisboa">Linkedin</a></p>
+<hr>
+<h2>Texto mono-espa&#xE7;ado Inline</h2>
+<p>Est&#xE1; &#xE9; uma das funcionalidades do markdown que eu mais gosto ela nos permite escrever trechos de c&#xF3;digos de forma elegante. Para relizar tal tarefa basta utilizar <em>```</em> ou <em>~~~</em>.</p>
+<ol>
+<li>Sem cores no c&#xF3;digo e usando <em>```</em>.</li>
+</ol>
+<pre data-role="codeBlock" data-info class="language-"><code>```
+# C&#xF3;digo em python
+
+def funcao(exemplo):
+   print(exemplo)
+```
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code># C&#xF3;digo em python
+
+def funcao(exemplo):
+   print(exemplo)
+</code></pre><ol start="2">
+<li>Sem cores no c&#xF3;digo e usando <em>~~~</em></li>
+</ol>
+<pre data-role="codeBlock" data-info class="language-"><code>~~~
+# C&#xF3;digo em python
+
+def funcao(exemplo):
+   print(exemplo)
+~~~
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code># C&#xF3;digo em python
+
+def funcao(exemplo):
+   print(exemplo)
+</code></pre><ol start="2">
+<li>Com cores no c&#xF3;digo basta adicionar o nome da linguagem ao lado do marcador inicial de c&#xF3;digo.</li>
+</ol>
+<pre data-role="codeBlock" data-info class="language-"><code>~~~Python
+# C&#xF3;digo em python
+
+def funcao(exemplo):
+   print(exemplo)
+~~~
+</code></pre><pre data-role="codeBlock" data-info="Python" class="language-python"><span class="token comment"># C&#xF3;digo em python</span>
+
+<span class="token keyword">def</span> <span class="token function">funcao</span><span class="token punctuation">(</span>exemplo<span class="token punctuation">)</span><span class="token punctuation">:</span>
+   <span class="token keyword">print</span><span class="token punctuation">(</span>exemplo<span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">classe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+   num <span class="token operator">=</span> <span class="token number">0</span>
+</pre><hr>
+<h2>Lista de tarefas</h2>
+<p>O markdown apresenta um recurso para cria&#xE7;&#xE3;o de lista de tarefas.</p>
+<p><em>-</em> [ ] Tarefa 1<br>
+<em>-</em> [ ] Tarefa 2<br>
+<em>-</em> [x] Tarefa 3</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Tarefa 1</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Tarefa 2</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked> Tarefa 3</li>
+</ul>
+<hr>
+<h2>Separador de conte&#xFA;do</h2>
+<pre data-role="codeBlock" data-info class="language-"><code>---
+</code></pre><hr>
+<hr>
+<h2>Considera&#xE7;&#xF5;es finais</h2>
+<p>Espero que tenha gostado deste pequeno tutorial sobre markdown.</p>
+<h2>Autor</h2>
+<h4>Antonio Carlos de Lisboa</h4>
+<p>Estudante de Engenharia da Computa&#xE7;&#xE3;o da UTFPR - Universidade Tecnl&#xF3;gica Federal do Paran&#xE1;.</p>
+<p>Redes Sociais:<br>
+<a href="https://www.linkedin.com/in/antonio-carlos-de-lisboa-549b8a181" title="Linkedin Atonio Lisboa">Linkedin</a></p>
+</div></body></html>
+      </div>
+      
+      
+    </body>
+    
+    
+    
+    
+    
+    
+    
+  </html>
