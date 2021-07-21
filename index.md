@@ -158,3 +158,29 @@ Na descrição de uma lista ordenada utilizamos um número seguide '.'.
 2. Continantes
     2.1. Europa
     2.3. Oceania
+
+## Imagens
+Em markdown existe algumas forma de se trabalhar com imagens tanto em repositório local junto com seu texto (no mesmo diretório) ou com imagens online.
+
+1. Para imagens locais adicione suas imagem no mesmo diretório do seu arquivo markdown.
+
+~~~
+![image](nemaimage.png)
+![image](nemaimage.png "title da imagem")
+
+Exemplo:
+![Markdown](Markdown.svg "Logo Markdown")
+~~~
+![Markdown](Markdown.png "Logo Markdown")
+
+2. Para imagens online basta ter o link da imagem.
+ ~~~
+ ![image_online](http://linkimage.com)
+ ![image_online](http://linkimage.com "title da imagem online")
+
+ Exemplo: 
+ ![Markdown_online](https://icons.veryicon.com/png/o/file-type/doucument/markdown-fill-1.png "Logo Markdown online")
+ ~~~
+ ![Markdown_online](https://icons.veryicon.com/png/o/file-type/doucument/markdown-fill-1.png "Logo Markdown online")
+ 
+ 
