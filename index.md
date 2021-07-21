@@ -1,5 +1,5 @@
 # Tutorial de Markdown
-Markdown é uma linguagem de marcação que pode ser utilizada para varias coisas, por exemplo em anotações pessoais ou simplesmenta na criação de uma página estática de html utilizando [Panic](https://pandoc.org/installing.html). O que realmenter torna o Markdown útil é a sua fácil construção sua e sintaxe simples. 
+Markdown é uma linguagem de marcação que pode ser utilizada para varias coisas, por exemplo em anotações pessoais ou simplesmenta na criação de uma página estática de html utilizando [Pandoc](https://pandoc.org/installing.html "Página para download do pandoc"). O que realmenter torna o Markdown útil é a sua fácil construção sua e sintaxe simples. 
 
 ## Criando arquivo
 Para criar seu primeiro markdown é simples basta escrever um arquivo com a extenção *.md* ou com a extenção *.markdown* e pronto basta a começar a edição.
@@ -11,7 +11,7 @@ Para os usuários de vscode recomendo que utilizam a exteção *Markdown Preview
 ## Paragráfo
 Para se obter um paragrafo em markdown basta pular uma linha.
 
-~~~markdown
+~~~
 1 Primeiro paragráfo.
 2 continuando o primeiro paragráfo.
 3 
@@ -66,3 +66,24 @@ _texto em itálico 2_
 **texto em negrito 1**
 __texto em negrito 2__
 
+ ## Links
+ A dicionar links em markdown é muito simples.
+ 1. Link direto
+ ~~~
+ 1 https://github.com/antoniolisboa
+ 2 <https://github.com/antoniolisboa>
+ ~~~
+https://github.com/antoniolisboa
+<https://github.com/antoniolisboa>
+
+ 2. Link em trecho de texto
+ ~~~
+ [Antonio Github](https://github.com/antoniolisboa)
+ ~~~
+ [Antonio Github](https://github.com/antoniolisboa)
+
+ 3. Link em trecho de texto com title
+ ~~~
+ [Antonio Github](https://github.com/antoniolisboa "Minha página no github")
+ ~~~
+ [Antonio Github](https://github.com/antoniolisboa "Minha página no github")
