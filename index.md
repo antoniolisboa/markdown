@@ -183,4 +183,106 @@ Exemplo:
  ~~~
  ![Markdown_online](https://icons.veryicon.com/png/o/file-type/doucument/markdown-fill-1.png "Logo Markdown online")
  
+ ## Tabelas
+ Markdown apresenta um recurso de tabelas bem interessante e de fácil construção. 
  
+ 1. Por padrão as colunas são alinhadas a esquerda.
+ ~~~
+ Produto | Preço | Add colunas... 
+ --------------------------------
+ Playstation 5 | 1 rin
+ Xbox Series | R$ 3000.00
+ Atari | Dinheiro nenhum compra
+ ~~~
+ Produto | Preço | Add colunas... 
+ --------|-------|-----------------
+ Playstation 5 | 1 rin
+ Xbox Series | R$ 3000.00
+ Atari | Dinheiro nenhum compra
+
+ 2. Para alinhar uma coluna a direita basta colocar o ':' do lado direito.
+ ~~~
+ Produto | Preço | 
+ --------:|------:
+ Playstation 5 | 1 rin
+ Xbox Series | R$ 3000.00
+ Atari | Dinheiro nenhum compra
+ ~~~
+ Produto | Preço | 
+ --------:|------:
+ Playstation 5 | 1 rin
+ Xbox Series | R$ 3000.00
+ Atari | Dinheiro nenhum compra
+
+ 3. Para centralizar uma coluna basta utilizar ':' tanto do lado direito quanto do esquerdo.
+ ~~~
+ Produto | Preço | 
+ :--------:|:------:
+ Playstation 5 | 1 rin
+ Xbox Series | R$ 3000.00
+ Atari | Dinheiro nenhum compra
+ ~~~
+ Produto | Preço | 
+ :--------:|:------:
+ Playstation 5 | 1 rin
+ Xbox Series | R$ 3000.00
+ Atari | Dinheiro nenhum compra
+
+ ## Texto mono-espaçado Inline
+ Está é uma das funcionalidades do markdown que eu mais gosto ela nos permite escrever trechos de códigos de forma elegante. Para relizar tal tarefa basta utilizar _```_ ou _~~~_.
+
+ 1. Sem cores no código e usando _```_.
+ ~~~
+ ```
+ # Código em python
+
+ def funcao(exemplo):
+    print(exemplo)
+ ```
+ ~~~
+
+ ```
+ # Código em python
+
+ def funcao(exemplo):
+    print(exemplo)
+ ```
+
+2. Sem cores no código e usando _~~~_
+
+ ```
+ ~~~
+ # Código em python
+
+ def funcao(exemplo):
+    print(exemplo)
+ ~~~
+ ```
+
+ ~~~
+ # Código em python
+
+ def funcao(exemplo):
+    print(exemplo)
+ ~~~
+
+ 2. Com cores no código basta adicionar o nome da linguagem ao lado do marcador inicial de código.
+
+ ```
+ ~~~Python
+ # Código em python
+
+ def funcao(exemplo):
+    print(exemplo)
+ ~~~
+ ```
+
+ ~~~Python
+ # Código em python
+
+ def funcao(exemplo):
+    print(exemplo)
+
+ class classe():
+    num = 0
+ ~~~
