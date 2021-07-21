@@ -1,5 +1,5 @@
 # Tutorial de Markdown
-Markdown é uma linguagem de marcação que pode ser utilizada para varias coisas, por exemplo em anotações pessoais ou simplesmenta na criação de uma página estática de html utilizando *panic colocar um link*. O que realmenter torna o Markdown útil é a sua fácil construção sua e sintaxe simples. 
+Markdown é uma linguagem de marcação que pode ser utilizada para varias coisas, por exemplo em anotações pessoais ou simplesmenta na criação de uma página estática de html utilizando [Panic](https://pandoc.org/installing.html). O que realmenter torna o Markdown útil é a sua fácil construção sua e sintaxe simples. 
 
 ## Criando arquivo
 Para criar seu primeiro markdown é simples basta escrever um arquivo com a extenção *.md* ou com a extenção *.markdown* e pronto basta a começar a edição.
@@ -54,4 +54,15 @@ Para se escrever um texto em itálico basta utilizar _*_ _*_ ou *_* *_* colocand
 
 *texto em itálico 1*
 _texto em itálico 2_
+
+ ## Texto em negrito
+ A escrita de um texto em negrito é semelhante ao em itálico com algumas pequenas mudanças. Para deixar em negrito use _**_ _**_ ou *__* *__* adicionando o texto na parte interna.
+
+ ~~~
+1 **texto em negrito 1**
+2 __texto em negrito 2__
+~~~
+
+**texto em negrito 1**
+__texto em negrito 2__
 
