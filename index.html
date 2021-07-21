@@ -1,8 +1,257 @@
 <h1 id="tutorial-de-markdown">Tutorial de Markdown</h1>
-<p>Markdown é uma linguagem de marcação que pode ser utilizada para varias coisas, por exemplo em anotações pessoais ou simplesmenta na criação de uma página estática de html utilizando panic. O que realmenter torna o Markdown útil é a sua fácil construção sua e sintaxe simples.</p>
-<h4 id="parte-1">1. Parte 1</h4>
-<h4 id="parte-2">2. Parte 2</h4>
-<h4 id="parte-3">3. Parte 3</h4>
-<h4 id="parte-4">4. Parte 4</h4>
-<h4 id="parte-5">5. Parte 5</h4>
-<h2 id="parte-1-1">Parte 1</h2>
+<p>Markdown é uma linguagem de marcação que pode ser utilizada para varias coisas, por exemplo em anotações pessoais ou simplesmenta na criação de uma página estática de html utilizando <a href="https://pandoc.org/installing.html" title="Página para download do pandoc">Pandoc</a>. O que realmenter torna o Markdown útil é a sua fácil construção sua e sintaxe simples.</p>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>## Criando arquivo Para criar seu primeiro markdown é simples basta escrever um arquivo com a extenção <em>.md</em> ou com a extenção <em>.markdown</em> e pronto basta a começar a edição.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>## Visualizando meu arquivo markdown Para os usuários de vscode recomendo que utilizam a exteção <em>Markdown Preview Enhanced</em> ela permite visualizar seu texto em markdown em tempo real enquando você está trabalhando nele como mostra a imagem.</td>
+</tr>
+<tr class="even">
+<td><img src="images/vscode_extencao.png" alt="extencao vscode" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="paragráfo">Paragráfo</h2>
+<p>Para se obter um paragrafo em markdown basta pular uma linha.</p>
+<pre><code>1 Primeiro paragráfo.
+2 continuando o primeiro paragráfo.
+3 
+4 Segundo paragráfo.
+5 continuando o segundo paragráfo.</code></pre>
+<p>Primeiro paragráfo. continuando o primeiro paragráfo.</p>
+<p>Segundo paragráfo. continuando o segundo paragráfo.</p>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>## Títulos Os títulos são definidos pelo <em>#</em> seguido do <em>Título</em>.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>## Texto em itálico Para se escrever um texto em itálico basta utilizar _<em>_ <em><em>_ ou </em></em></em> *_* colocando o texto na parte interna.</td>
+</tr>
+<tr class="even">
+<td>~~~ 1 <em>texto em itálico 1</em> 2 <em>texto em itálico 2</em> ~~~</td>
+</tr>
+<tr class="odd">
+<td><em>texto em itálico 1</em> <em>texto em itálico 2</em></td>
+</tr>
+</tbody>
+</table>
+<p>## Texto em negrito A escrita de um texto em negrito é semelhante ao em itálico com algumas pequenas mudanças. Para deixar em negrito use _**_ _**_ ou *__* *__* adicionando o texto na parte interna.</p>
+<pre><code>1 **texto em negrito 1**
+2 __texto em negrito 2__</code></pre>
+<p><strong>texto em negrito 1</strong> <strong>texto em negrito 2</strong></p>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">## Links A dicionar links em markdown é muito simples. 1. Link direto ~~~ 1 https://github.com/antoniolisboa 2 <a href="https://github.com/antoniolisboa" class="uri">https://github.com/antoniolisboa</a> ~~~ https://github.com/antoniolisboa <a href="https://github.com/antoniolisboa" class="uri">https://github.com/antoniolisboa</a></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">## Citações Citação é reliazada utilizando o <em>&gt;</em> ela pode ser de uma linha ou mutltiplas linhas.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">~~~ &gt;Citação de uma linha ~~~ &gt;Citação de uma linha</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">~~~ &gt;Citação de multiplas linhas &gt;Linha 1 &gt;Linha 2 &gt;Linha 3 ~~~ &gt;Citação de multiplas linhas &gt;Linha 1 &gt;Linha 2 &gt;Linha 3</td>
+</tr>
+</tbody>
+</table>
+<p>## Lista não ordenada Lista de itens não ordenados pode ser feita utilizando _<em>_ ou </em>-<em>. ~~~ </em> Paises * Brasil * Portugal * Continentes * Europa * Oceania ~~~</p>
+<ul>
+<li>Paises
+<ul>
+<li>Brasil</li>
+<li>Portugal</li>
+</ul></li>
+<li>Continentes
+<ul>
+<li>Europa</li>
+<li>Oceania</li>
+</ul></li>
+</ul>
+<pre><code> - Paises
+    - Brasil
+    - Portugal
+ - Continentes
+    - Europa
+    - Oceania</code></pre>
+<ul>
+<li>Paises
+<ul>
+<li>Brasil</li>
+<li>Portugal</li>
+</ul></li>
+<li>Continentes
+<ul>
+<li>Europa</li>
+<li>Oceania</li>
+</ul></li>
+</ul>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>## Listas ordenadas Na descrição de uma lista ordenada utilizamos um número seguide ‘.’.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>## Imagens Em markdown existe algumas forma de se trabalhar com imagens tanto em repositório local junto com seu texto (no mesmo diretório) ou com imagens online.</td>
+</tr>
+<tr class="even">
+<td>1. Para imagens locais adicione suas imagem no mesmo diretório do seu arquivo markdown.</td>
+</tr>
+<tr class="odd">
+<td>~~~ <img src="nemaimage.png" alt="image" /> <img src="nemaimage.png" title="title da imagem" alt="image" /></td>
+</tr>
+<tr class="even">
+<td>Exemplo: <img src="Markdown.svg" title="Logo Markdown" alt="Markdown" /> ~~~ <img src="Markdown.png" title="Logo Markdown" alt="Markdown" /></td>
+</tr>
+<tr class="odd">
+<td>2. Para imagens online basta ter o link da imagem. ~~~ <img src="http://linkimage.com" alt="image_online" /> <img src="http://linkimage.com" title="title da imagem online" alt="image_online" /></td>
+</tr>
+<tr class="even">
+<td>Exemplo: <img src="https://icons.veryicon.com/png/o/file-type/doucument/markdown-fill-1.png" title="Logo Markdown online" alt="Markdown_online" /> ~~~ <img src="https://icons.veryicon.com/png/o/file-type/doucument/markdown-fill-1.png" title="Logo Markdown online" alt="Markdown_online" /></td>
+</tr>
+</tbody>
+</table>
+<p>## Tabelas Markdown apresenta um recurso de tabelas bem interessante e de fácil construção.</p>
+<ol type="1">
+<li>Por padrão as colunas são alinhadas a esquerda.</li>
+</ol>
+<pre><code>Produto | Preço | Add colunas... 
+--------------------------------
+Playstation 5 | 1 rin
+Xbox Series | R$ 3000.00
+Atari | Dinheiro nenhum compra</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>Produto</th>
+<th>Preço</th>
+<th>Add colunas…</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Playstation 5</td>
+<td>1 rin</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Xbox Series</td>
+<td>R$ 3000.00</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Atari</td>
+<td>Dinheiro nenhum compra</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="1">
+<li>Para alinhar uma coluna a direita basta colocar o ‘:’ do lado direito.</li>
+</ol>
+<pre><code>Produto | Preço | 
+--------:|------:
+Playstation 5 | 1 rin
+Xbox Series | R$ 3000.00
+Atari | Dinheiro nenhum compra</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Produto</th>
+<th style="text-align: right;">Preço</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Playstation 5</td>
+<td style="text-align: right;">1 rin</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Xbox Series</td>
+<td style="text-align: right;">R$ 3000.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Atari</td>
+<td style="text-align: right;">Dinheiro nenhum compra</td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="1">
+<li>Para centralizar uma coluna basta utilizar ‘:’ tanto do lado direito quanto do esquerdo.</li>
+</ol>
+<pre><code>Produto | Preço | 
+:--------:|:------:
+Playstation 5 | 1 rin
+Xbox Series | R$ 3000.00
+Atari | Dinheiro nenhum compra</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Produto</th>
+<th style="text-align: center;">Preço</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Playstation 5</td>
+<td style="text-align: center;">1 rin</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Xbox Series</td>
+<td style="text-align: center;">R$ 3000.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Atari</td>
+<td style="text-align: center;">Dinheiro nenhum compra</td>
+</tr>
+</tbody>
+</table>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">## Texto mono-espaçado Inline Está é uma das funcionalidades do markdown que eu mais gosto ela nos permite escrever trechos de códigos de forma elegante. Para relizar tal tarefa basta utilizar <em>```</em> ou <em>~~~</em>.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">## Lista de tarefas O markdown apresenta um recurso para criação de lista de tarefas.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><em>-</em> [ ] Tarefa 1 <em>-</em> [ ] Tarefa 2 <em>-</em> [x] Tarefa 3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">- [ ] Tarefa 1 - [ ] Tarefa 2 - [x] Tarefa 3</td>
+</tr>
+</tbody>
+</table>
+<p>## Separador de conteúdo ~~~ — ~~~ —</p>
+<hr />
+<p>## Considerações finais Espero que tenha gostado deste pequeno tutorial sobre markdown.</p>
+<p>## Autor #### Antonio Carlos de Lisboa Estudante de Engenharia da Computação da UTFPR - Universidade Tecnlógica Federal do Paraná.</p>
+<p>Redes Sociais: <a href="https://www.linkedin.com/in/antonio-carlos-de-lisboa-549b8a181" title="Linkedin Atonio Lisboa">Linkedin</a></p>
