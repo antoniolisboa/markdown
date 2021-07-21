@@ -87,3 +87,56 @@ https://github.com/antoniolisboa
  [Antonio Github](https://github.com/antoniolisboa "Minha página no github")
  ~~~
  [Antonio Github](https://github.com/antoniolisboa "Minha página no github")
+
+ ## Citações
+ Citação é reliazada utilizando o *>* ela pode ser de uma linha ou mutltiplas linhas.
+
+ ~~~
+ >Citação de uma linha
+ ~~~
+ >Citação de uma linha
+
+  ~~~
+ >Citação de multiplas linhas
+ >Linha 1
+ >Linha 2
+ >Linha 3
+ ~~~
+ >Citação de multiplas linhas
+ >Linha 1
+ >Linha 2
+ >Linha 3
+
+ ## Lista não ordenada
+ Lista de itens não ordenados pode ser feita utilizando _*_ ou *-*.
+ ~~~
+ * Paises
+    * Brasil
+    * Portugal
+ * Continentes
+    * Europa
+    * Oceania
+ ~~~
+
+ * Paises
+    * Brasil
+    * Portugal
+ * Continentes
+    * Europa
+    * Oceania
+
+~~~
+ - Paises
+    - Brasil
+    - Portugal
+ - Continentes
+    - Europa
+    - Oceania
+ ~~~
+
+ - Paises
+    - Brasil
+    - Portugal
+ - Continentes
+    - Europa
+    - Oceania
