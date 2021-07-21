@@ -5,8 +5,9 @@ Markdown é uma linguagem de marcação que pode ser utilizada para varias coisa
 Para criar seu primeiro markdown é simples basta escrever um arquivo com a extenção *.md* ou com a extenção *.markdown* e pronto basta a começar a edição.
 
 ## Visualizando meu arquivo markdown
-Para os usuários de vscode recomendo que utilizam a exteção *Markdown Preview Enhanced*
+Para os usuários de vscode recomendo que utilizam a exteção *Markdown Preview Enhanced* ela permite visualizar seu texto em markdown em tempo real enquando você está trabalhando nele como mostra a imagem.
 
+![extencao_vscode](images/vscode_extencao.png)
 ## Paragráfo
 Para se obter um paragrafo em markdown basta pular uma linha:
 
