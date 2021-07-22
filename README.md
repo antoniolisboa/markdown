@@ -9,7 +9,7 @@ Para criar seu primeiro markdown é simples basta escrever um arquivo com a exte
 ## Visualizando meu arquivo markdown
 Para os usuários de vscode recomendo que utilizam a exteção *Markdown Preview Enhanced* ela permite visualizar seu texto em markdown em tempo real enquando você está trabalhando nele como mostra a imagem.
 
-![extencao vscode](images/vscode_extencao.png)
+![extencao_vscode](images/vscode_extencao.png)
 
 ---
 ## Paragráfo
